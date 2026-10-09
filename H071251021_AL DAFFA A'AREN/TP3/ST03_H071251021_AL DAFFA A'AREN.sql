@@ -1,0 +1,2 @@
+SELECT ordernumber, orderlinenumber, productcode, quantityordered, priceeach, (quantityordered * priceeach) * 0.95  AS "discountedtotalprice" FROM orderdetails
+WHERE (quantityordered > 50 AND priceEach > 100) AND LEFT(productcode, 3) != 'S18' ORDER BY "discountedtotalprice" DESC;
