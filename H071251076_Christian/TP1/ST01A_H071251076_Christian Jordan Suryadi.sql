@@ -1,0 +1,11 @@
+CREATE TABLE data_pegawai (
+	id_pegawai INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+	nama VARCHAR(100) NOT NULL,
+	umur INT NOT NULL,
+	gaji NUMERIC(12,3) NOT NULL,
+	email VARCHAR(150) NOT NULL,
+	tanggal_masuk DATE NOT NULL, 
+	aktif BOOLEAN
+);
+
+SELECT * FROM data_pegawai;

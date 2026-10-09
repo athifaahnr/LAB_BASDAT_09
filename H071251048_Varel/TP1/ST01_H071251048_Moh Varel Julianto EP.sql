@@ -1,0 +1,8 @@
+CREATE TABLE siswa(
+	nisn VARCHAR(10) PRIMARY KEY,
+	nama_siswa VARCHAR(100) NOT NULL,
+	rata_rata NUMERIC (3,2) CHECK (rata_rata BETWEEN 0 AND 100),
+	email VARCHAR(150) UNIQUE,
+	tahun INT CHECK (tahun >= 2000)
+	lulus BOOLEAN DEFAULT FALSE
+);
